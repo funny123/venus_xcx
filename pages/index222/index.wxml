@@ -1,0 +1,542 @@
+<navbar parameter='{{parameter}}' logoUrl="{{logoUrl}}"></navbar>
+<view class='index'>
+  <view class='index-bg'>
+    <swiper indicator-dots="true" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,0.6)" indicator-active-color="#fff">
+      <block wx:for="{{imgUrls}}" wx:key>
+        <swiper-item>
+          <navigator url='{{item.url}}' class='slide-navigator acea-row row-between-wrapper' hover-class='none'>
+            <image src="{{item.pic}}" class="slide-image" />
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- nav -->
+  <!-- <view class='nav acea-row'>
+    <block wx:for="{{menus}}" wx:key>
+      <navigator class='item' wx:if="{{item.show == '1'}}" url='{{item.url}}' open-type='switchTab' hover-class='none'>
+        <view class='pictrue'>
+          <image src='{{item.pic}}'></image>
+        </view>
+        <view>{{item.name}}</view>
+      </navigator>
+      <navigator class='item' wx:else url='{{item.url}}' hover-class='none'>
+        <view class='pictrue'>
+          <image src='{{item.pic}}'></image>
+        </view>
+        <view>{{item.name}}</view>
+      </navigator>
+    </block>
+  </view> -->
+  <!-- 修改 -->
+  <view>
+    <navigator url='/pages/goods_list/goods_list?sid=15' style='width:100%;height:100%;' hover-class='none'>
+      <image src="https://examplebucket-1252395778.cos.ap-shanghai.myqcloud.com/index/%E9%A6%96%E9%A1%B5%E5%89%8D%E7%AB%AF/%E5%93%81%E7%89%8C%E6%A0%91.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+    </navigator>
+    <!-- address -->
+    <!-- <navigator url='/pages/goods_list/goods_list' style='width:100%;height:100%;' hover-class='none'> -->
+    <image src="https://examplebucket-1252395778.cos.ap-shanghai.myqcloud.com/index/%E9%A6%96%E9%A1%B5%E5%89%8D%E7%AB%AF/%E5%9C%B0%E5%9D%80%E6%B5%B7%E6%8A%A5.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+    <!-- </navigator> -->
+    <video id="myVideo" style="width:100%;display:block;" src="https://examplebucket-1252395778.cos.ap-shanghai.myqcloud.com/index/videos/venus.mp4" controls></video>
+    <navigator url='/pages/goods_list/goods_list' style='width:100%;height:100%;' hover-class='none'>
+      <image src="https://examplebucket-1252395778.cos.ap-shanghai.myqcloud.com/index/%E9%A6%96%E9%A1%B5%E5%89%8D%E7%AB%AF/%E6%B2%83%E7%BB%85%E7%BE%8E%E5%AD%A6%E5%B7%A5%E5%85%B7%E6%B5%B7%E6%8A%A5.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;"
+      />
+    </navigator>
+
+    <!-- grid -->
+    
+
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=5' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_top.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+      <navigator url='/pages/goods_list/goods_list?sid=5' style='width:33.33333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_01.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_list/goods_list?sid=6' style='width:33.33333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_02.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_list/goods_list?sid=7' style='width:33.3333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_03.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      <navigator url='/pages/goods_list/goods_list?sid=8' style='width:33.33333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_04.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_list/goods_list?sid=9' style='width:33.33333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_05.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_list/goods_list?sid=10' style='width:33.3333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_06.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_list/goods_list?sid=11' style='width:33.33333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_07.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_list/goods_list?sid=12' style='width:33.33333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_08.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_list/goods_list?sid=13' style='width:33.3333333333333%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/grid/grid_09.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+
+    <!-- jiapi -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=17' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/jipai/11_08.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=30' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/jipai/11_06_01.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=18' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/jipai/11_06_02.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=147' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/jipai/11_07_01.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=21' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/jipai/11_07_02.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- DH -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=22' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://examplebucket-1252395778.cos.ap-shanghai.myqcloud.com/index/DH%E7%B4%A2%E5%BC%95%E6%9D%A1/%E7%BB%84-11_08.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=46' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/dh/dh01.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=43' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/dh/dh02.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=44' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/dh/dh03.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=47' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/dh/dh04.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- yspark -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=27' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yspark/11_05.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=182' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yspark/11_09_01.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=169' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yspark/11_09_02.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=177' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yspark/11_10_01.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=40' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yspark/11_10_02.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+
+    <!-- juguar -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=21' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/juguar/11_08.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=125' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/juguar/0901.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=120' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/juguar/0902.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=126' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/juguar/1001.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=122' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/juguar/1002.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 鹰 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=25' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/ying/11_05.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=96' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/ying/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=90' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/ying/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=89' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/ying/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=102' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/ying/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 勇 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=24' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yong/11_05.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=128' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yong/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=133' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yong/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=129' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yong/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=132' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/yong/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 飞 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=23' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fei/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=87' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fei/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=86' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fei/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=88' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fei/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=85' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fei/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 造型 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=29' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/zaoxing/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=289' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/zaoxing/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=200' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/zaoxing/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=197' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/zaoxing/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=205' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/zaoxing/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 火 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=60' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/huo/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=148' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/huo/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=150' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/huo/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=149' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/huo/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=151' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/huo/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 电推 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=26' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/diantui/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=224' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/diantui/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=214' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/diantui/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=217' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/diantui/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=218' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/diantui/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 辅助 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=54' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fuzhu/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=176' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fuzhu/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=239' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fuzhu/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=233' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fuzhu/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=178' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/fuzhu/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 水谷 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=20' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/shuigu/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=78' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/shuigu/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=79' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/shuigu/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=76' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/shuigu/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=84' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/shuigu/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 光 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=18' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/guang/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=62' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/guang/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=69' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/guang/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=64' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/guang/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=66' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/guang/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+    <!-- 大武士 -->
+    <block class="section">
+      <navigator url='/pages/goods_list/goods_list?sid=19' style='width:100%;height:100%;' hover-class='none'>
+        <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/wushi/1105.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+      </navigator>
+      <view class="flex-row" style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content:space-between;">
+        <navigator url='/pages/goods_details/index?id=161' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/wushi/0601.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=277' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/wushi/0602.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=286' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/wushi/0701.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+        <navigator url='/pages/goods_details/index?id=287' style='width:50%;height:100%;display:inline-block;' hover-class='none'>
+          <image src="https://venus-1252395778.cos.ap-shanghai.myqcloud.com/haibao/wushi/0702.png" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+        </navigator>
+      </view>
+    </block>
+
+    <!-- DO -->
+    <navigator url='/pages/goods_list/goods_list' style='width:100%;height:100%;' hover-class='none'>
+      <image src="https://examplebucket-1252395778.cos.ap-shanghai.myqcloud.com/index/DO/DO/%E7%BB%84-11_05.jpg" class="tree-image" mode="widthFix" style="width:100%;display:block;" />
+    </navigator>
+  </view>
+  <!-- 新闻 -->
+  <!-- <view class='news acea-row row-between-wrapper'>
+    <view class='pictrue'>
+      <image src='/images/news.png'></image>
+    </view>
+    <view class='swiperTxt'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="2500" duration="{{duration}}" vertical="true" circular="true">
+        <block wx:for="{{itemNew}}" wx:key>
+          <swiper-item catchtouchmove='catchTouchMove'>
+            <navigator wx:if="{{item.show == '1'}}" url='{{item.url}}' open-type='switchTab' class='acea-row row-between-wrapper' hover-class='none'>
+              <view class='text acea-row row-between-wrapper'>
+                <view class='label border2' wx:if="{{item.id%2 == 0}}">最新</view>
+                <view class='newsTitle line1'>{{item.info}}</view>
+              </view>
+              <view class='iconfont icon-xiangyou'></view>
+            </navigator>
+            <navigator wx:else open-type='navigate' url='{{item.url}}' class='acea-row row-between-wrapper' hover-class='none'>
+              <view class='text acea-row row-between-wrapper'>
+                <view class='label border2' wx:if="{{item.id%2 == 0}}">最新</view>
+                <view class='newsTitle line1'>{{item.info}}</view>
+              </view>
+              <view class='iconfont icon-xiangyou'></view>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view> -->
+  <!-- 活动 -->
+  <!-- <view class='specialArea acea-row row-between-wrapper'>
+      <block wx:for="{{activityList}}" wx:key>
+       <navigator class='assemble' url='{{item.link}}' wx:if="{{index < 1}}">
+          <image src='{{item.pic}}'></image>
+          <view class='text'>
+             <view class='name'>{{item.title}}</view>
+             <view class='infor'>{{item.info}}</view>
+          </view>
+       </navigator>
+      </block> 
+       <view class='list acea-row row-column-between'>
+          <block wx:for="{{activityList}}" wx:key>
+            <navigator class='item' url='{{item.link}}' wx:if="{{index > 0}}">
+              <image src='{{item.pic}}'></image>
+              <view class='text'>
+                  <view class='name'>{{item.title}}</view>
+                  <view class='infor'>{{item.info}}</view>
+              </view>
+            </navigator>
+          </block>  
+       </view>
+    </view> -->
+  <view class='wrapper'>
+    <!-- 快速选择 -->
+    <!-- <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name line1'>快速选择</view>
+        <view class='line1'>{{fastInfo}}</view>
+      </view>
+      <navigator class='more' url='/pages/goods_cate/goods_cate' open-type='switchTab'>更多
+        <text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view> -->
+    <!-- <view class='scroll-product'>
+      <scroll-view class="scroll-view_x" scroll-x style="width:auto;overflow:hidden;">
+        <block wx:for="{{fastList}}" wx:key>
+          <navigator hover-class="none" class='item' url='/pages/goods_list/goods_list?sid={{item.id}}&title={{item.cate_name}}'>
+            <view class='img-box'>
+              <image src='{{item.pic}}'></image>
+            </view>
+            <view class='pro-info line1'>{{item.cate_name}}</view>
+          </navigator>
+        </block>
+      </scroll-view>
+    </view> -->
+  </view>
+  <!-- tuijian -->
+  <!-- <view class='wrapper'>
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name line1'>精品推荐</view>
+        <view class='line1'>{{bastInfo}}</view>
+      </view>
+      <navigator class='more' hover-class="none" url='/pages/first-new-product/index?type=1'>更多
+        <text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+    <view class='boutique'>
+      <swiper autoplay="true" indicator-dots="true" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(252,65,65,0.3)" indicator-active-color="#fc4141">
+        <block wx:for="{{bastBanner}}" wx:key>
+          <swiper-item>
+            <navigator url='{{item.link}}' style='width:100%;height:100%;' hover-class='none'>
+              <image src="{{item.img}}" class="slide-image" data-idx='{{index}}' />
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <goodList bastList="{{bastList}}"></goodList>
+  </view> -->
+  <view class='hotList'>
+    <view class='hot-bg'>
+      <view class='title acea-row row-between-wrapper'>
+        <view class='text line1'>
+          <text class='label'>热门榜单</text>根据销量、搜索、好评等综合得出</view>
+        <navigator class='more' hover-class="none" url='/pages/first-new-product/index?type=2'>更多
+          <text class="iconfont icon-jiantou"></text>
+        </navigator>
+      </view>
+    </view>
+    <view class='list acea-row row-between-wrapper'>
+      <block wx:for="{{likeInfo}}" wx:key>
+        <navigator class='item' url='/pages/goods_details/index?id={{item.id}}'>
+          <view class='pictrue'>
+            <image src='{{item.image}}'></image>
+            <image wx:if="{{index == 0}}" src='/images/one.png' class='numPic'></image>
+            <image wx:elif="{{index == 1}}" src='/images/two.png' class='numPic'></image>
+            <image wx:elif="{{index == 2}}" src='/images/three.png' class='numPic'></image>
+          </view>
+          <view class='name line1'>{{item.store_name}}</view>
+          <view class='money font-color'>￥
+            <text class='num'>{{item.price}}</text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view class='adver' wx:if="{{lovelyBanner.length > 0}}">
+    <block wx:for="{{lovelyBanner}}" wx:key>
+      <image src='{{item.img}}'></image>
+    </block>
+  </view>
+  <view class='wrapper'>
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name line1'>首发新品
+          <text class='new font-color'>NEW~</text>
+        </view>
+        <view class='line1'>{{firstInfo}}</view>
+      </view>
+      <navigator class='more' hover-class="none" url='/pages/first-new-product/index?type=3'>更多
+        <text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+    <view class='newProducts'>
+      <scroll-view class="scroll-view_x" scroll-x style="width:auto;overflow:hidden;">
+        <block wx:for="{{firstList}}" wx:key>
+          <navigator hover-class="none" url='/pages/goods_details/index?id={{item.id}}' class='item'>
+            <view class='img-box'>
+              <image src='{{item.image}}'></image>
+            </view>
+            <view class='pro-info line1'>{{item.store_name}}</view>
+            <view class='money font-color'>￥{{item.price}}</view>
+          </navigator>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- <view class='wrapper'>
+    <view class='title acea-row row-between-wrapper'>
+      <view class='text'>
+        <view class='name line1'>促销单品</view>
+        <view class='line1'>{{salesInfo}}</view>
+      </view>
+      <navigator class='more' hover-class="none" url='/pages/promotional-items/index'>更多
+        <text class='iconfont icon-jiantou'></text>
+      </navigator>
+    </view>
+    <promotionGood benefit="{{benefit}}"></promotionGood>
+  </view> -->
+</view>
+<coupon-window window='{{window}}' couponList="{{couponList}}" bind:onColse="onColse"></coupon-window>
+<home></home>
