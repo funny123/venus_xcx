@@ -227,13 +227,14 @@ Page({
     var changeValue = e.detail;
     //获取当前变动属性
     var productSelect = this.data.productValue[this.data.attrValue];
-    if (this.data.cart_num) {
-      productSelect.cart_num = this.data.cart_num;
-    };
     //如果没有属性,赋值给商品默认库存
     if (productSelect === undefined && !this.data.productAttr.length) productSelect = this.data.productSelect;
     //不存在不加数量
     if (productSelect === undefined) return;
+
+    if (this.data.cart_num) {
+      productSelect.cart_num = this.data.cart_num;
+    };
     //提取库存
     var stock = productSelect.stock || 0;
     //设置默认数据
