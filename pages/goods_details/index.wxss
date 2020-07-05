@@ -4,7 +4,10 @@
 .navbar{position:fixed;background-color:#fff;top:0;left:0;z-index:999;width:100%;}
 .navbar .navbarH{position:relative;}
 .navbar .navbarH .navbarCon{position:absolute;bottom:0;height:100rpx;width:100%;}
-.icon-xiangzuo{color:#000;font-weight:bold;position:fixed;font-size:40rpx;width:100rpx;height:56rpx;line-height:54rpx;z-index:1000;left:33rpx;}
+.returnF{position:fixed;top:0;left:0;width:100rpx;z-index:1000;}
+.returnF .returnH{position:relative;}
+.returnF .returnH .returnCon{position:absolute;bottom:0;height:100rpx;width:100%;color:#000;font-weight:bold;font-size:40rpx;}
+/* .icon-xiangzuo{color:#000;font-weight:bold;position:fixed;font-size:40rpx;width:100rpx;height:56rpx;line-height:54rpx;z-index:1000;left:33rpx;} */
 .product-con .footer{padding:0 20rpx 0 30rpx;position:fixed;bottom:0;width:100%;box-sizing:border-box;height:100rpx;background-color:#fff;z-index:99;border-top:1rpx solid #f0f0f0;}
 .product-con .footer .item{font-size:18rpx;color:#666;}
 .product-con .footer .item .iconfont{text-align:center;font-size:40rpx;}

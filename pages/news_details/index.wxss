@@ -5,7 +5,7 @@ page{background-color:#fff!important;}
 .newsDetail .list .item{margin-left:27rpx;font-size:30rpx;color:#B1B2B3;}
 .newsDetail .list .item .iconfont{font-size:28rpx;margin-right:10rpx;}
 .newsDetail .list .item .iconfont.icon-shenhezhong{font-size:26rpx;}
-.newsDetail .conter{padding:0 30rpx;font-size:32rpx;color:#8A8B8C;line-height:1.7;}
+.newsDetail .conter{padding:0 30rpx;font-size:32rpx;color:#8A8B8C;line-height:1.7;word-wrap: break-word;word-break: normal;}
 .newsDetail .picTxt {width: 690rpx;height: 200rpx;border-radius: 20rpx;border: 1px solid #e1e1e1;position: relative;margin: 30rpx auto 0 auto;}
 .newsDetail .picTxt .pictrue {width: 200rpx;height:100%;}
 .newsDetail .picTxt .pictrue image {width: 100%;height: 100%;border-radius: 20rpx 0 0 20rpx;

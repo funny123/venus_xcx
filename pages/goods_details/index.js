@@ -243,7 +243,7 @@ Page({
     if (changeValue) {
       productSelect.cart_num++;
       //大于库存时,等于库存
-      if (productSelect.cart_num > stock) productSelect.cart_num = stock;
+      if (productSelect.cart_num > stock) productSelect.cart_num = stock ? stock : 1;
       this.setData({
         ['productSelect.cart_num']: productSelect.cart_num,
         cart_num: productSelect.cart_num
@@ -267,6 +267,9 @@ Page({
     var values = e.detail;
     var productSelect = this.data.productValue[values];
     var storeInfo = this.data.storeInfo;
+    this.setData({
+      cart_num:1
+    })
     if (productSelect) {
       this.setData({
         ["productSelect.image"]: productSelect.image,
@@ -283,7 +286,7 @@ Page({
         ["productSelect.price"]: storeInfo.price,
         ["productSelect.stock"]: 0,
         ['productSelect.unique']: '',
-        ['productSelect.cart_num']: 0,
+        ['productSelect.cart_num']: 1,
         attrValue: '',
         attr: '请选择'
       });
@@ -479,12 +482,12 @@ Page({
         ["productSelect.price"]: storeInfo.price,
         ["productSelect.stock"]: this.data.productAttr.length ? 0 : storeInfo.stock,
         ['productSelect.unique']: '',
-        ['productSelect.cart_num']: this.data.productAttr.length ? 0 : 1,
+        ['productSelect.cart_num']: 1,
         attrValue: '',
         attr: '请选择'
       });
     }
-    this.setData({ productAttr: productAttr });
+    this.setData({ productAttr: productAttr, cart_num:1});
   },
   /**
    * 获取是否收藏
@@ -632,6 +635,7 @@ Page({
           ["productSelect.stock"]: that.data.storeInfo.stock,
           ['productSelect.unique']: '',
           ['productSelect.cart_num']: 1,
+          cart_num:1
         });
         that.selectComponent('#product-window').ResetAttr();
         setTimeout(function () {

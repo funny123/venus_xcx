@@ -116,8 +116,8 @@ export function getProductslist(data){
  * @param int type 
  * 
 */
-export function getGroomList(type){
-  return request.get('groom/list/'+type,{},{noAuth:true});
+export function getGroomList(type,data){
+  return request.get('groom/list/'+type,data,{noAuth:true});
 }
 
 /**

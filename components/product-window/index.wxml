@@ -27,7 +27,7 @@
              <input type="number" value="{{productSelect.cart_num}}" data-name="productSelect.cart_num" bindinput="bindCode"></input>
           </view>
           <view wx:if="{{iSplus}}" class='plus {{productSelect.cart_num >= productSelect.stock? "on":""}}' bindtap='CartNumInt'>+</view>
-          <view wx:else class='plus {{(productSelect.cart_num >= productSelect.quota_show) || (productSelect.cart_num >= productSelect.product_stock)? "on":""}}' bindtap='CartNumInt'>+</view>
+          <view wx:else class='plus {{(productSelect.cart_num >= productSelect.quota_show) || (productSelect.cart_num >= productSelect.product_stock) || (productSelect.cart_num >= productSelect.num)? "on":""}}' bindtap='CartNumInt'>+</view>
        </view>
    </view>
    <view class="joinBnt bg-color" wx:if="{{iSbnt && productSelect.product_stock>0 &&productSelect.quota>0}}" bindtap="goCat">我要参团</view>

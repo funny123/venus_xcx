@@ -9,7 +9,14 @@
       </view>
    </view>
 </view>
-<view class='iconfont icon-xiangzuo' style="top:{{navH/2}}rpx" bindtap='returns'></view>
+<view class="returnF" style="height:{{navH}}rpx;">
+    <view class="returnH" style='height:{{navH}}rpx;'>
+        <view class="returnCon acea-row row-center-wrapper" bindtap="returns">
+           <view class="iconfont icon-xiangzuo"></view>
+        </view>
+    </view>
+</view>
+<!-- <view class='iconfont icon-xiangzuo' style="top:{{navH/2}}rpx" bindtap='returns'></view> -->
 <!-- <view style="height:{{navH+20}}rpx;" wx:if="{{scrollY>200}}"></view> -->
 <!-- style='height:{{scrollY>200?(height+2*navH+20):(height+navH)}}rpx;' -->
 <view class='product-con'>

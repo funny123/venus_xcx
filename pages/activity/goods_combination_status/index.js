@@ -115,12 +115,12 @@ Page({
         ["productSelect.quota_show"]: 0,
         ["productSelect.quota"]: 0,
         ['productSelect.unique']: '',
-        ['productSelect.cart_num']: this.data.productAttr.length ? 0 : 1,
+        ['productSelect.cart_num']: 1,
         attrValue: '',
         attr: '请选择'
       });
     }
-    this.setData({ productAttr: productAttr });
+    this.setData({ productAttr: productAttr,["productSelect.num"]: storeInfo.num, cart_num: 1 });
   },
   /**
  * 购物车数量加和数量减
@@ -142,18 +142,25 @@ Page({
       var stock = productSelect.stock || 0;
       var quotaShow = productSelect.quota_show || 0;
       var productStock = productSelect.product_stock || 0;
+      var quota = productSelect.quota || 0;
+      var num = this.data.storeInfo.num || 0;
       //设置默认数据
       if (productSelect.cart_num == undefined) productSelect.cart_num = 1;
       //数量+
-    console.log(this.data.productSelect.cart_num);
       if (changeValue) {
         productSelect.cart_num++;
         //大于库存时,等于库存
-        if (quotaShow >= productStock) {
-          if (productSelect.cart_num >= productStock) productSelect.cart_num = productStock;
-        } else {
-          if (productSelect.cart_num >= quotaShow) productSelect.cart_num = quotaShow;
-        }
+        let arrMin = [];
+        arrMin.push(num);
+        arrMin.push(quota);
+        arrMin.push(productStock);
+        let minN = Math.min.apply(null,arrMin);
+        if (productSelect.cart_num >= minN) productSelect.cart_num = minN ? minN : 1;
+        // if (quotaShow >= productStock) {
+        //   if (productSelect.cart_num >= productStock) productSelect.cart_num = productStock;
+        // } else {
+        //   if (productSelect.cart_num >= quotaShow) productSelect.cart_num = quotaShow;
+        // }
         this.setData({
           ['productSelect.cart_num']: productSelect.cart_num,
           cart_num: productSelect.cart_num
@@ -178,7 +185,8 @@ Page({
     var productSelect = this.data.productValue[values];
     var storeInfo = this.data.storeInfo;
     this.setData({
-      cart_num: 1
+      cart_num: 1,
+      ["productSelect.num"]: storeInfo.num
     });
     if (productSelect) {
       this.setData({
@@ -200,7 +208,7 @@ Page({
         ["productSelect.quota_show"]: 0,
         ["productSelect.quota"]: 0,
         ['productSelect.unique']: '',
-        ['productSelect.cart_num']: 0,
+        ['productSelect.cart_num']: 1,
         attrValue: '',
         attr: '请选择'
       });
@@ -215,7 +223,9 @@ Page({
         ['productSelect.price']: that.data.storeInfo.price,
         ['productSelect.quota']: that.data.storeInfo.stock,
         ['productSelect.unique']: '',
-        ['productSelect.cart_num']: 1
+        ["productSelect.num"]: that.data.storeInfo.num,
+        ['productSelect.cart_num']: 1,
+        cart_num: 1
       })
     }
   },

@@ -21,6 +21,9 @@
         </view>
      </view>
   </view>
+   <view class='loadingicon acea-row row-center-wrapper' wx:if='{{couponsList.length > 0}}'>
+      <text class='loading iconfont icon-jiazai' wx:if='{{loading==true}}'></text>{{loadTitle}}
+   </view>
 </view>
 <view class='noCommodity' wx:elif="{{!couponsList.length && loading==true}}">
    <view class='pictrue'><image src='/images/noCoupon.png'></image></view>
