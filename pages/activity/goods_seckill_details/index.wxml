@@ -11,9 +11,9 @@
    </view>
 </view>
 <view class='iconfont icon-xiangzuo' style="top:{{navH/2}}rpx" bindtap='returns'></view>
-<view style="height:{{navH+20}}rpx;" wx:if="{{scrollY>450}}"></view>
+<!-- <view style="height:{{navH+20}}rpx;" wx:if="{{scrollY>450}}"></view> -->
 <view class='product-con'>
-  <scroll-view scroll-into-view='{{toView}}' scroll-y='true' scroll-with-animation="true" style='height:{{scrollY>450?(height+2*navH+20):(height+navH)}}rpx;' bindscroll="scroll">
+  <scroll-view scroll-top="{{scrollTop}}" scroll-y='true' scroll-with-animation="true" style='height:{{height}}px;' bindscroll="scroll">
   <view id="past0">
     <productConSwiper imgUrls='{{imgUrls}}'></productConSwiper>
     <view class='nav acea-row row-between-wrapper'>
@@ -64,7 +64,7 @@
           <template is="wxParse" data="{{wxParseData:description.nodes}}"/>
         </view>
     </view>
-    <view style='height:100rpx;'></view>
+    <view style='height:120rpx;'></view>
     </scroll-view>
     <view class='footer acea-row row-between-wrapper'>             
          <button open-type="contact" hover-class='none' class='item' send-message-title="{{storeInfo.store_name}}" send-message-img="{{storeInfo.image}}" send-message-path="/pages/goods_seckill_details/index?id={{storeInfo.id}}" show-message-card>

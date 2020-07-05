@@ -1,4 +1,3 @@
-<!-- <navbar parameter='{{parameter}}'></navbar> -->
 <view class='navbar {{parameter.class}}' style='height:{{navH}}rpx;opacity:{{opacity}}'>
    <view class='navbarH' style='height:{{navH}}rpx;'>
       <view class='navbarCon acea-row row-center-wrapper'>
@@ -11,9 +10,10 @@
    </view>
 </view>
 <view class='iconfont icon-xiangzuo' style="top:{{navH/2}}rpx" bindtap='returns'></view>
-<view style="height:{{navH+20}}rpx;" wx:if="{{scrollY>200}}"></view>
+<!-- <view style="height:{{navH+20}}rpx;" wx:if="{{scrollY>200}}"></view> -->
+<!-- style='height:{{scrollY>200?(height+2*navH+20):(height+navH)}}rpx;' -->
 <view class='product-con'>
- <scroll-view scroll-into-view='{{toView}}' scroll-y='true' scroll-with-animation="true" style='height:{{scrollY>200?(height+2*navH+20):(height+navH)}}rpx;' bindscroll="scroll">
+ <scroll-view scroll-top="{{scrollTop}}" scroll-y='true' scroll-with-animation="true" style='height:{{height}}px;' bindscroll="scroll">
      <view id="past0">
   <productConSwiper imgUrls="{{storeInfo.slider_image}}" videoline="{{storeInfo.video_link}}"></productConSwiper>
   <view class='wrapper'>
@@ -141,23 +141,18 @@
       <template is="wxParse" data="{{wxParseData:description.nodes}}" />
     </view>
   </view>
-  <view style='height:100rpx;'></view>
+  <view style='height:120rpx;'></view>
    </scroll-view>
   <view class='footer acea-row row-between-wrapper'>
     <button open-type="contact" hover-class='none' class='item ' send-message-title="{{storeInfo.store_name}}" send-message-img="{{storeInfo.image}}" send-message-path="/pages/goods_details/index?id={{storeInfo.id}}" show-message-card>
     <view class='iconfont icon-kefu'></view>
     <view>客服</view>
     </button>
-     <navigator open-type='switchTab' class="animated item {{animated==true?'bounceIn':''}}" url='/pages/index/index'>
-      <view class='iconfont icon-shouye'>
-      </view>
-      <view>首页</view>
-    </navigator>
-    <!-- <view bindtap='setCollect' class='item'>
+    <view bindtap='setCollect' class='item'>
       <view class='iconfont icon-shoucang1' wx:if="{{storeInfo.userCollect}}"></view>
       <view class='iconfont icon-shoucang' wx:else></view>
       <view>收藏</view>
-    </view> -->
+    </view>
     <navigator open-type='switchTab' class="animated item {{animated==true?'bounceIn':''}}" url='/pages/order_addcart/order_addcart'>
       <view class='iconfont icon-gouwuche1'>
         <text class='num bg-color'>{{CartCount || 0}}</text>

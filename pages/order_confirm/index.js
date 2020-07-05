@@ -136,7 +136,6 @@ Page({
   },
   addressType:function(e){
     let index = e.currentTarget.dataset.index;
-    this.computedPrice();
     if (this.data.storeList.length>0){
       this.setData({ shippingType: parseInt(index) });
     }else{
@@ -144,6 +143,7 @@ Page({
         return app.Tips({ title: '暂无门店信息，你无法选择到店自提' });
       }
     }
+    this.computedPrice();
   },
   bindPickerChange: function (e) {
     let value = e.detail.value;

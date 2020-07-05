@@ -50,6 +50,7 @@ Page({
     height: 0,
     heightArr: [],
     lock: false,
+    scrollTop:0
   },
   returns: function () {
     wx.navigateBack();
@@ -57,18 +58,18 @@ Page({
   tap: function (e) {
     var id = e.currentTarget.dataset.id;
     var index = e.currentTarget.dataset.index;
+    var that = this;
     // if (!this.data.good_list.length && id == "past2") {
     //   id = "past3"
     // }
     this.setData({
       toView: id,
       navActive: index,
-      lock: true
+      lock: true,
+      scrollTop:index>0?that.data.topArr[index]-(app.globalData.navHeight/2):that.data.topArr[index]
     });
   },
   scroll: function (e) {
-    // console.log(666);
-    console.log(e.detail.scrollTop);
     var that = this, scrollY = e.detail.scrollTop;
     var opacity = scrollY / 450;
     opacity = opacity > 1 ? 1 : opacity;
@@ -83,7 +84,7 @@ Page({
       return;
     }
     for (var i = 0; i < that.data.topArr.length; i++) {
-      if (scrollY < that.data.topArr[i] + that.data.heightArr[i]) {
+      if (scrollY < that.data.topArr[i] - (app.globalData.navHeight/2) + that.data.heightArr[i]) {
         that.setData({
           navActive: i
         });
@@ -106,7 +107,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          height: (res.windowHeight) * (750 / res.windowWidth) - 98 - that.data.navH
+          height: res.windowHeight
           //res.windowHeight:获取整个窗口高度为px，*2为rpx；98为头部占据的高度；
         })
       },
@@ -378,7 +379,7 @@ Page({
       that.DefaultSelect();
       setTimeout(function () {
         that.infoScroll();
-      }, 1000);
+      }, 500);
       app.globalData.openPages = '/pages/activity/goods_seckill_details/index?id=' + that.data.id + '&time=' + that.data.time + '&scene=' + that.data.storeInfo.uid;
       wxParse.wxParse('description', 'html', that.data.storeInfo.description || '', that, 0);
       wxh.time(that.data.time, that);
